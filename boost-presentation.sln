@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boost-presentation", "boost-presentation\boost-presentation.vcproj", "{0256D590-03E7-4B5A-B6EA-129550529227}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "echo_server", "echo_server\echo_server.vcproj", "{3CC7C25E-5B53-4485-B928-CDEE8AFF3655}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "echo_client", "echo_client\echo_client.vcproj", "{68B37FC8-087B-43D5-967F-9D3618423B2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0256D590-03E7-4B5A-B6EA-129550529227}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0256D590-03E7-4B5A-B6EA-129550529227}.Debug|Win32.Build.0 = Debug|Win32
+		{0256D590-03E7-4B5A-B6EA-129550529227}.Release|Win32.ActiveCfg = Release|Win32
+		{0256D590-03E7-4B5A-B6EA-129550529227}.Release|Win32.Build.0 = Release|Win32
+		{3CC7C25E-5B53-4485-B928-CDEE8AFF3655}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3CC7C25E-5B53-4485-B928-CDEE8AFF3655}.Debug|Win32.Build.0 = Debug|Win32
+		{3CC7C25E-5B53-4485-B928-CDEE8AFF3655}.Release|Win32.ActiveCfg = Release|Win32
+		{3CC7C25E-5B53-4485-B928-CDEE8AFF3655}.Release|Win32.Build.0 = Release|Win32
+		{68B37FC8-087B-43D5-967F-9D3618423B2D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{68B37FC8-087B-43D5-967F-9D3618423B2D}.Debug|Win32.Build.0 = Debug|Win32
+		{68B37FC8-087B-43D5-967F-9D3618423B2D}.Release|Win32.ActiveCfg = Release|Win32
+		{68B37FC8-087B-43D5-967F-9D3618423B2D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

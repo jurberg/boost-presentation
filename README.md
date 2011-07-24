@@ -1,0 +1,1 @@
+This project contains the source files for the boost presentation from the Chippewa Valley 2008 Code Camp.  You need to install Boost on your machine and update the project or Makefile to point to the install before compiling.
