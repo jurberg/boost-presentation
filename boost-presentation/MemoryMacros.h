@@ -45,11 +45,41 @@
 
 #elif defined(__GNUC__)
 
+#ifdef DEBUG
+
+	#include <malloc.h>
+
+	#define MEMORY_CHECKPOINT \
+		struct mallinfo memStart; \
+		struct mallinfo memEnd; \
+		memStart = mallinfo(); \
+		{
+
+	#define ASSERT_MEMORY_LEAK \
+		} \
+		memEnd = mallinfo(); \
+		if (memStart.uordblks == memEnd.uordblks) \
+		{ \
+			BOOST_FAIL("A memory leak was expected"); \
+		}
+
+	#define ASSERT_NO_MEMORY_LEAK \
+		} \
+		memEnd = mallinfo(); \
+		if (memStart.uordblks != memEnd.uordblks) \
+		{ \
+			BOOST_FAIL("A memory leak exists"); \
+		}
+
+#else
+
 	#define MEMORY_CHECKPOINT
 
 	#define ASSERT_MEMORY_LEAK 
 
 	#define ASSERT_NO_MEMORY_LEAK
+
+#endif
 
 #endif
 

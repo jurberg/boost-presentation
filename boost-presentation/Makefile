@@ -4,15 +4,18 @@ OBJS = bind_tests.o FastPimplScoped.o scoped_ptr_tests.o boost_test.o \
  signals_test.o CustomerRepository.o lambda_tests.o thread_tests.o \
  CustomerTest.o Money.o timer_test.o FastPimpl.o MoneyTest.o weak_ptr_tests.o
 
-CC = g++
-DEBUG = -g
-CFLAGS = -Wall -c $(DEBUG)
+CC = g++ 
+DEBUG = -g 
+CFLAGS = -Wall -c $(DEBUG) -DDEBUG
 LFLAGS = -Wall $(DEBUG)
-BOOST_LIB_DIR = /usr/local/lib
+BOOST_LIB_DIR = /usr/lib
 BOOST_LIBS = $(BOOST_LIB_DIR)/libboost_system.a \
  $(BOOST_LIB_DIR)/libboost_unit_test_framework.a \
  $(BOOST_LIB_DIR)/libboost_signals.a \
  $(BOOST_LIB_DIR)/libboost_thread.a
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $<
 
 boost_presentation : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o boost_presentation -lpthread $(BOOST_LIBS)

@@ -4,7 +4,7 @@ CC = g++
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
-BOOST_LIB = /usr/local/lib
+BOOST_LIB = /usr/lib
 
 echo_server : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o echo_server -lpthread \
