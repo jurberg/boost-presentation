@@ -7,10 +7,10 @@
 BOOST_AUTO_TEST_CASE(Simplest)
 {
     BOOST_CHECK((2 + 2) == 4); // continues on error
-    BOOST_REQUIRE((2 + 2) == 4); // throws an error
+    BOOST_REQUIRE((2 + 2) == 4); // fails on error
 	if ((2 + 2) != 4) BOOST_ERROR("Ouch..."); // continues on error
-    if ((2 + 2) != 4) BOOST_FAIL("Ouch..."); // throws an error
-    if ((2 + 2) != 4) throw "Ouch..."; // throws an error
+    if ((2 + 2) != 4) BOOST_FAIL("Ouch..."); // fails on error
+    if ((2 + 2) != 4) throw "Ouch..."; // fails on error
     BOOST_CHECK_MESSAGE((2 + 2) == 4, "(2 + 2) == 4"); // continues on error
     BOOST_CHECK_EQUAL((2 + 2), 4); // continues on error
 }
