@@ -21,6 +21,7 @@ FastPimpl::FastPimpl()
 
 FastPimpl::~FastPimpl()
 {
+	delete imp;
 }
 
 void FastPimpl::DoSomething()
